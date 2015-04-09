@@ -17,15 +17,17 @@ import com.speedment.codegen.lang.models.values.TextValue;
  * @author Emil Forslund
  */
 public class Main {
+    
+    private final static TxtWriter OUTPUT = new TxtWriter("BasicExample.java");
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println(new JavaGenerator().on(
+        OUTPUT.write(new JavaGenerator().on(
             File.of("org/example/BasicExample.java")
                 .add(Class.of("BasicExample")
-                    .add(GENERATED)
+                    .add(GENERATED.set(new TextValue("CodeGen 1.0")))
                     .public_()
                     .add(
                         Field.of("BASIC_MESSAGE", STRING)
