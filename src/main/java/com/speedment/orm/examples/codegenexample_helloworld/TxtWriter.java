@@ -24,6 +24,10 @@ public class TxtWriter {
 	
 	public TxtWriter(File file) {
 		this.file = file;
+        
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
 	}
 	
 	public void write(String... rows) {

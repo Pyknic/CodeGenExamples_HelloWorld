@@ -18,14 +18,15 @@ import com.speedment.codegen.lang.models.values.TextValue;
  */
 public class Main {
     
-    private final static TxtWriter OUTPUT = new TxtWriter("BasicExample.java");
+    private final static String FILENAME  = "org/example/BasicExample.java";
+    private final static TxtWriter OUTPUT = new TxtWriter("src/main/java/" + FILENAME);
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         OUTPUT.write(new JavaGenerator().on(
-            File.of("org/example/BasicExample.java")
+            File.of(FILENAME)
                 .add(Class.of("BasicExample")
                     .add(GENERATED.set(new TextValue("CodeGen 1.0")))
                     .public_()
