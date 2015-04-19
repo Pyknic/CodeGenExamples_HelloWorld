@@ -1,4 +1,4 @@
-package com.speedment.orm.examples.codegenexample_helloworld;
+package com.speedment.codegen.example.helloworld;
 
 import java.io.File;
 import java.io.FileWriter;

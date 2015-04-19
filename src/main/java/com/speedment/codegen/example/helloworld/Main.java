@@ -1,4 +1,4 @@
-package com.speedment.orm.examples.codegenexample_helloworld;
+package com.speedment.codegen.example.helloworld;
 
 import com.speedment.codegen.java.JavaGenerator;
 import com.speedment.codegen.lang.controller.AutoJavadoc;
