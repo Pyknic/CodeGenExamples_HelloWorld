@@ -38,7 +38,7 @@ public class Main {
                     .add(
                         Method.of("main", VOID)
                         .set(Javadoc.of(
-                            "This is a vary basic example of ",
+                            "This is a very basic example of ",
                             "the capabilities of the Code Generator."
                         ))
                         .public_().static_()
